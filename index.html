@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Pak Abah - Coffee & Mood</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Custom CSS -->
+
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
+        <div class="container">
+            <a class="navbar-brand animate__animated animate__fadeIn" href="#">
+                <i class="fas fa-coffee me-2"></i>Kopi Pak Abah
+            </a>
+            
+            <!-- Tombol Toggle untuk Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menu Navigasi -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menuSection">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary ms-lg-3 px-4" href="#order">
+                            <i class="fas fa-shopping-cart me-2"></i>Pesan Sekarang
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-hero min-vh-100 d-flex align-items-center">
+        <div class="container my-5 py-5">
+                <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right">
+                    <h1 class="display-3 text-white animated slideInLeft">
+                        Nikmati Karya Seni<br>Dalam Secangkir Kopi
+                    </h1>
+                    <p class="text-white animated slideInLeft mb-4 pb-2">
+                        Setiap cangkir kopi kami adalah perpaduan antara cita rasa dan keindahan, 
+                        dibuat dengan penuh dedikasi oleh barista ahli Kopi Pak Abah
+                    </p>
+                    <a href="#menuSection" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Lihat Menu</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="mb-4">Cerita Kopi Pak Abah</h2>
+                    <p class="lead">Perjalanan rasa yang dimulai sejak 2010</p>
+                    <div class="coffee-journey mt-4">
+                        <div class="journey-item d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Pemilihan Biji</h5>
+                                <p class="mb-0">Biji kopi pilihan dari petani lokal terbaik</p>
+                            </div>
+                        </div>
+                        <div class="journey-item d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Proses Roasting</h5>
+                                <p class="mb-0">Dipanggang dengan presisi untuk rasa terbaik</p>
+                            </div>
+                        </div>
+                        <div class="journey-item d-flex align-items-center">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-mug-hot"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Penyajian</h5>
+                                <p class="mb-0">Disajikan dengan cinta oleh barista ahli</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image-card">
+                        <img src="img/toko-pak-abah.jpg" 
+                             alt="Our Story" 
+                             class="img-fluid rounded-2 about-image top-image"
+                             width="70%"
+                             height="auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section with Filter -->
+    <section class="menu-section py-5 min-vh-100" id="menuSection">
+        <div class="container">
+            <br>
+            <h2 class="text-center mb-5" >Menu Kami</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="menu-filters text-center mb-4">
+                <button class="btn btn-outline-primary active" data-filter="all">Semua</button>
+                <button class="btn btn-outline-primary" data-filter="hot">Kopi Panas</button>
+                <button class="btn btn-outline-primary" data-filter="cold">Kopi Dingin</button>
+                <button class="btn btn-outline-primary" data-filter="non-coffee">Non-Coffee</button>
+                <button class="btn btn-outline-primary" data-filter="snack">Snack</button>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="row g-4" id="menuItems">
+                <!-- Kopi Panas -->
+                <div class="col-lg-4 menu-item" data-category="hot">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80" alt="Vanilla Bean Latte">
+                        <div class="card-body">
+                            <h5 class="card-title">Vanilla Bean Latte</h5>
+                            <p class="card-text">Perpaduan espresso, vanilla bean asli, dan susu</p>
+                            <h6 class="price">Rp 28.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="hot">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Cappuccino">
+                        <div class="card-body">
+                            <h5 class="card-title">Cappuccino</h5>
+                            <p class="card-text">Espresso dengan steamed milk dan foam yang lembut</p>
+                            <h6 class="price">Rp 25.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="hot">
+                    <div class="card menu-card">
+                        <img src="https://awsimages.detik.net.id/community/media/visual/2022/07/18/caramel-latte-vs-caramel-macchiato-1.jpeg?w=1200" alt="Caramel Macchiato">
+                        <div class="card-body">
+                            <h5 class="card-title">Caramel Macchiato</h5>
+                            <p class="card-text">Espresso dengan vanilla dan caramel sauce</p>
+                            <h6 class="price">Rp 30.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kopi Dingin -->
+                <div class="col-lg-4 menu-item" data-category="cold">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80" alt="Iced Americano">
+                        <div class="card-body">
+                            <h5 class="card-title">Iced Americano</h5>
+                            <p class="card-text">Espresso dengan air dingin dan es batu</p>
+                            <h6 class="price">Rp 23.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="cold">
+                    <div class="card menu-card">
+                        <img src="https://kopikita.id/wp-content/uploads/2023/09/Simply-Recipes-Cold-Brew-Coffee-LEAD-16-428691bcdd594281b2f5dc6dbc8235e4.jpg" alt="Cold Brew">
+                        <div class="card-body">
+                            <h5 class="card-title">Cold Brew</h5>
+                            <p class="card-text">Kopi yang diseduh dingin selama 12 jam</p>
+                            <h6 class="price">Rp 27.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="cold">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1594261956806-3ad03785c9b4?auto=format&fit=crop&w=800&q=80" alt="Iced Caffe Latte">
+                        <div class="card-body">
+                            <h5 class="card-title">Iced Caffe Latte</h5>
+                            <p class="card-text">Espresso dengan susu dingin dan es batu</p>
+                            <h6 class="price">Rp 26.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Non-Coffee -->
+                <div class="col-lg-4 menu-item" data-category="non-coffee">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=800&q=80" alt="Green Tea Latte">
+                        <div class="card-body">
+                            <h5 class="card-title">Green Tea Latte</h5>
+                            <p class="card-text">Matcha premium dengan susu segar</p>
+                            <h6 class="price">Rp 30.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="non-coffee">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="Hot Chocolate">
+                        <div class="card-body">
+                            <h5 class="card-title">Hot Chocolate</h5>
+                            <p class="card-text">Cokelat premium dengan susu creamy</p>
+                            <h6 class="price">Rp 28.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="non-coffee">
+                    <div class="card menu-card">
+                        <img src="https://flash-coffee.com/id/wp-content/uploads/sites/13/2023/06/THAI-TEA.png" alt="Thai Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Thai Tea</h5>
+                            <p class="card-text">Teh Thailand dengan susu creamy</p>
+                            <h6 class="price">Rp 25.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Snack Items -->
+                <div class="col-lg-4 menu-item" data-category="snack">
+                    <div class="card menu-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=800&q=80" alt="French Fries">
+                        <div class="card-body">
+                            <h5 class="card-title">French Fries</h5>
+                            <p class="card-text">Kentang goreng renyah dengan bumbu spesial</p>
+                            <h6 class="price">Rp 25.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="snack">
+                    <div class="card menu-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1619096252214-ef06c45683e3?auto=format&fit=crop&w=800&q=80" alt="Nachos">
+                        <div class="card-body">
+                            <h5 class="card-title">Nachos Supreme</h5>
+                            <p class="card-text">Nachos dengan saus keju, guacamole, dan salsa</p>
+                            <h6 class="price">Rp 35.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="snack">
+                    <div class="card menu-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80" alt="Chicken Wings">
+                        <div class="card-body">
+                            <h5 class="card-title">Spicy Wings</h5>
+                            <p class="card-text">Sayap ayam goreng dengan saus pedas</p>
+                            <h6 class="price">Rp 45.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="snack">
+                    <div class="card menu-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?auto=format&fit=crop&w=800&q=80" alt="Onion Rings">
+                        <div class="card-body">
+                            <h5 class="card-title">Onion Rings</h5>
+                            <p class="card-text">Cincin bawang goreng renyah</p>
+                            <h6 class="price">Rp 20.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="snack">
+                    <div class="card menu-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=800&q=80" alt="Mozzarella Sticks">
+                        <div class="card-body">
+                            <h5 class="card-title">Mozzarella Sticks</h5>
+                            <p class="card-text">Stik keju mozzarella dengan saus marinara</p>
+                            <h6 class="price">Rp 30.000</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 menu-item" data-category="snack">
+                    <div class="card menu-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80" alt="Spring Rolls">
+                        <div class="card-body">
+                            <h5 class="card-title">Spring Rolls</h5>
+                            <p class="card-text">Lumpia sayur dengan saus asam manis</p>
+                            <h6 class="price">Rp 25.000</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12"></div>
+                    <nav aria-label="Menu pagination">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item active">
+                                <button class="page-link" data-page="1">1</button>
+                            </li>
+                            <li class="page-item">
+                                <button class="page-link" data-page="2">2</button>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+
+    <!-- Menu Spesial Section -->
+    <section class="menu-section py-5 min-vh-80" id="special-menu">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Menu Spesial Minggu Ini</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="card special-menu-card">
+                        <div class="special-menu-image">
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Special Coffee" 
+                                 class="card-img-top">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vanilla Bean Latte</h5>
+                            <p class="card-text">Perpaduan espresso, vanilla bean asli, dan susu</p>
+                            <div class="price-wrapper mb-3 justify-content-center">
+                                <span class="old-price">Rp 35.000</span>
+                                <span class="new-price">Rp 28.000</span>
+                            </div>
+                            <button class="btn btn-primary order-button">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section id="instagram-feed" class="instagram-feed">
+        <div class="container">
+            <h2 class="text-center mb-5" 
+                data-aos="fade-down" 
+                data-aos-duration="1000" 
+                data-aos-easing="ease-in-out">Instagram Feed</h2>
+            
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="insta-card" 
+                    data-aos="zoom-in-up" 
+                    data-aos-duration="800" 
+                    data-aos-delay="100"
+                    data-aos-anchor-placement="center-bottom">
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=80" alt="Coffee Beans">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>@kopipakabah</span>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="insta-card" 
+                    data-aos="zoom-in-down" 
+                    data-aos-duration="800" 
+                    data-aos-delay="200"
+                    data-aos-anchor-placement="center-bottom">
+                    <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&w=800&q=80" alt="Latte Art">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>@kopipakabah</span>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="insta-card" 
+                    data-aos="fade-up-right" 
+                    data-aos-duration="800" 
+                    data-aos-delay="300"
+                    data-aos-anchor-placement="center-bottom">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Coffee Shop">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>@kopipakabah</span>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="insta-card" 
+                    data-aos="fade-up-left" 
+                    data-aos-duration="800" 
+                    data-aos-delay="400"
+                    data-aos-anchor-placement="center-bottom">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Coffee Cup">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>@kopipakabah</span>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="insta-card" 
+                    data-aos="flip-up" 
+                    data-aos-duration="800" 
+                    data-aos-delay="500"
+                    data-aos-anchor-placement="center-bottom">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Coffee Shop Interior">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>@kopipakabah</span>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="insta-card" 
+                    data-aos="flip-down" 
+                    data-aos-duration="800" 
+                    data-aos-delay="600"
+                    data-aos-anchor-placement="center-bottom">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" alt="Coffee and Laptop">
+                    <div class="insta-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>@kopipakabah</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="mb-4">Hubungi Kami</h2>
+                    <p class="lead mb-4">Kami senang mendengar dari Anda</p>
+                    <div class="contact-info">
+                        <div class="d-flex mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Lokasi</h5>
+                                <p>Jl. Contoh No. 123, Kota, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5>Telepon</h5>
+                                <p>+62 123 4567 890</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <p>info@kopipakabah.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form class="contact-form p-4 rounded-4">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nama Lengkap">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Pesan"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,           // Durasi default
+            easing: 'ease-in-out',    // Efek easing
+            once: false,              // Animasi akan diulang setiap scroll
+            mirror: true,             // Efek mirror saat scroll up
+            offset: 50,               // Offset trigger animasi
+            anchorPlacement: 'center-bottom', // Posisi anchor
+            disable: 'mobile'         // Nonaktifkan di mobile untuk performa
+        });
+
+        // Refresh AOS saat window load
+        window.addEventListener('load', () => {
+            AOS.refresh();
+        });
+
+        // Custom Cursor
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.custom-cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scroll');
+            } else {
+                navbar.classList.remove('navbar-scroll');
+            }
+        });
+
+        // Menu Filter
+        document.querySelectorAll('.menu-filters .btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                // Update active button
+                document.querySelector('.menu-filters .active').classList.remove('active');
+                button.classList.add('active');
+                
+                // Filter menu items
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    if(filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll untuk menu link
+        document.querySelector('a[href="#menuSection"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#menuSection').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Pagination functionality
+        const itemsPerPage = 6; // Jumlah item per halaman
+        const menuItems = document.querySelectorAll('.menu-item');
+        
+        function showPage(pageNumber) {
+            const start = (pageNumber - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            menuItems.forEach((item, index) => {
+                if (index >= start && index < end) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Update active page
+            document.querySelectorAll('.page-link').forEach(link => {
+                link.parentElement.classList.remove('active');
+                if (link.getAttribute('data-page') == pageNumber) {
+                    link.parentElement.classList.add('active');
+                }
+            });
+        }
+
+        // Add click event listeners to pagination
+        document.querySelectorAll('.page-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageNumber = parseInt(e.target.getAttribute('data-page'));
+                showPage(pageNumber);
+            });
+        });
+
+        // Show first page by default
+        showPage(1);
+
+        // Modify existing menu filter code
+        document.querySelectorAll('.menu-filters .btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                // Update active button
+                document.querySelector('.menu-filters .active').classList.remove('active');
+                button.classList.add('active');
+                
+                // Filter menu items
+                if (filter === 'all') {
+                    showPage(1); // Reset ke halaman 1 untuk tampilan 'Semua'
+                    document.querySelector('.pagination').style.display = 'flex';
+                } else {
+                    document.querySelector('.pagination').style.display = 'none';
+                    menuItems.forEach(item => {
+                        if (item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+
+        // Scroll Position Handler
+        document.addEventListener('DOMContentLoaded', function() {
+            let lastScrollPosition = 0;
+            const menuSection = document.getElementById('menuSection');
+
+            // Fungsi untuk menyimpan posisi scroll
+            function saveScrollPosition() {
+                lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            }
+
+            // Fungsi untuk mengembalikan posisi scroll
+            function restoreScrollPosition() {
+                window.scrollTo({
+                    top: lastScrollPosition,
+                    behavior: 'instant' // Menggunakan 'instant' untuk mencegah animasi
+                });
+            }
+
+            // Handler untuk pagination
+            document.querySelector('.pagination').addEventListener('click', function(e) {
+                if (e.target.classList.contains('page-link')) {
+                    e.preventDefault();
+                    saveScrollPosition();
+                    
+                    // Tunggu render selesai
+                    setTimeout(() => {
+                        restoreScrollPosition();
+                    }, 0);
+                }
+            });
+
+            // Handler untuk filter buttons
+            document.querySelectorAll('.menu-filters .btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Scroll ke awal section untuk filter baru
+                    menuSection.scrollIntoView({
+                        behavior: 'instant'
+                    });
+                });
+            });
+
+            // Tambahkan ke handler pagination yang sudah ada
+            function showPage(pageNumber) {
+                saveScrollPosition();
+                
+                // Existing pagination logic
+                const start = (pageNumber - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                
+                menuItems.forEach((item, index) => {
+                    item.style.display = (index >= start && index < end) ? 'block' : 'none';
+                });
+
+                // Update active state
+                document.querySelectorAll('.page-link').forEach(link => {
+                    link.parentElement.classList.toggle('active', 
+                        link.getAttribute('data-page') == pageNumber);
+                });
+
+                // Restore scroll setelah konten diupdate
+                setTimeout(restoreScrollPosition, 0);
+            }
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const navHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
