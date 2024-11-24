@@ -18,4 +18,4 @@ Jika Anda ingin berkontribusi pada proyek ini, silakan fork repositori ini dan b
 Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
 ## Kontak
-Jika Anda memiliki pertanyaan atau saran, silakan hubungi saya di [jefaxdua@gmail.com](mailto:jefaxdua@gmail.com).
+Jika Anda memiliki pertanyaan atau saran, silakan hubungi saya di [Telegram](https://t.me/itsmejefa).
