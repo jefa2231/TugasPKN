@@ -471,7 +471,10 @@ h2 {
     }
 }
 
-
+/* Tambahan CSS untuk smooth transition */
+.menu-section {
+    scroll-behavior: auto !important; /* Mencegah smooth scroll bawaan */
+}
 
 #menuItems {
     transition: none !important; /* Menghapus transisi yang bisa menyebabkan delay */
@@ -886,6 +889,7 @@ section {
     }
     
     .bg-hero {
+        text-align: center;
         min-height: 80vh;
         position: relative;
         overflow: hidden;
